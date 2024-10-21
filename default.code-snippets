@@ -1,0 +1,51 @@
+{
+	"Print to log": {
+		"prefix": "log",
+		"body": [
+			"console.log('$1:', $1);"
+		],
+		"description": "控制台打印变量"
+	},
+	"Print to clone": {
+		"prefix": "JSONp",
+		"body": [
+			"JSON.parse(JSON.stringify($1));"
+		],
+		"description": "深拷贝对象"
+	},
+	"import": {
+		"prefix": "import",
+		"body": [
+			"import {$2} from '$1';"
+		],
+		"description": "导入资源"
+	},
+	"paste to log": {
+		"prefix": "logc",
+		"body": [
+			"console.log('$CLIPBOARD$1', $CLIPBOARD$1);"
+		],
+		"description": "打印出剪切板内容"
+	},
+	"await promise": {
+		"prefix": "awaitp",
+		"body": [
+			"const res = await $1;","if(res?.success){","$2","}"
+		],
+		"description": "等待请求"
+	},
+	"useEffect": {
+		"prefix": "useEffect",
+		"body": [
+			"useEffect(() => {"," $1","},[$2]);"
+		],
+		"description": "useEffect"
+	},
+	"useState": {
+		"prefix": "useState",
+		"body": [
+            "const [$1,$2] = useState($3);"
+        ],
+		"description": "useState"
+	},
+}
